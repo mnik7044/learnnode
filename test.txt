@@ -1,3 +1,23 @@
 This is a text file I created using fs but asyncHey There
 Hey There
 Hey There
+
+
+//Version 
+
+4.18.2
+
+1st Part => 4
+2nd Part => 18
+3rd Part => 2
+
+// 3rd Part => Minor FIxes (Optional update)
+
+Latest 
+
+// 2nd part => Recommended bug fix/ security fix/ Critical bug fix  recommended bug fix ya new feature added
+
+//1st part => Major release hosakta hai ki codes version 5 me chale hi na
+This is major and breaking update dont update if the code is already written
+agar new project banaoge tab hi isko update kro
+//// Riskyyyyyy
