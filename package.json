@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mynewscript" : "node app.js"
+    "mynewscript": "node app.js",
+    "start": "node index"
   },
   "author": "",
-  "license": "ISC" 
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
