@@ -1,0 +1,6 @@
+Models routes controller
+
+roytes - diff routes define create delete update of the user
+Models is for defining your schema or can be said where we are using database
+controller- THE PLACE WHERE WE WANNA DO ALL OF THE DIFFERENT THINGS WE WANNA DO WITH THE DATA
+MANAGE OF DATA

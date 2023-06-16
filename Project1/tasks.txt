@@ -1,0 +1,79 @@
+REST API - JSON
+
+GET /users- Renders a html document
+
+GET /api/users - List all users -  DONE BRO 🚀🚀🚀🚀
+
+(GET/api/users/1 - Get the user with id 1 - DOne🚀🚀🚀🚀🚀
+
+GET/api/users/2 - Get the user with id 2) - done 🚀🚀🚀🚀
+
+Dynamic path parameters jo baadme 1 ya 2 hai na wo dynamic patha parameters hai
+
+GET/api/users/:id ====>>>>> This is the syntax of a dynamic path parameters where the id can be anything
+
+POST/api/user - Create new users
+
+PATCH/api/users/1 - Edit the user with id 1
+
+DELETE/api/users/1 - Delete the user with id 1  
+
+
+
+
+
+EXPLANATION OF CODE WHICH I FOUND TOUGH
+
+
+
+
+app.get("/api/users/:id", (req,res) => {
+    const id = Number(req.params.id);
+    const user = users.find((user) => user.id== id)
+    return res.json(user);
+})
+
+/* In the code snippet ((user) => user.id == id), the user is a parameter name used in an arrow function.
+ Let me explain it in simpler terms:
+
+The find() method iterates over each element in the users array and passes each element as an argument to the provided function.
+
+In this case, the provided function is an arrow function (user) => user.id == id. 
+The parameter user represents each individual element (user object) in the users array.
+
+The arrow function checks if the id property of the current user object is equal to the value of the id variable
+ that was defined earlier in the code.
+
+So, in each iteration, the arrow function compares the id property of the current user object
+ with the value of id to determine if there is a match.
+
+If a match is found, the find() method returns that user object.
+ Otherwise, it continues to the next element in the users array until either a match is found or all elements have been checked.
+
+In summary, the user in (user) => user.id == id is a parameter name used in the arrow function
+ to represent each user object from the users array during the iteration.*/
+
+
+
+ Middle ware function 
+
+ Aisa function jo request aur response ke bich me aaye, 
+ we can do any type of processing in the middleware function
+ Middleware check karega ki kya request ko aage jana chahiye end karna chahiye
+ function of middleware are it cAN:
+
+ Execute any code.
+Make changes to the request and the response objects.
+End the request-response cycle.
+Call the next middleware in the stack.
+
+
+IT has the access to request object, response object AND NEXT MIDDLEWARE object
+SYNTAX OF MIDDLEWARE IS 
+
+app.use((req,res,next) =>
+{yaha aapka code and next me bhejna hoga to 
+next()
+agar response end krna hoga to res.json ya res.end or whatever.
+
+})

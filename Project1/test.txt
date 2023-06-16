@@ -1,0 +1,5 @@
+schema- We define the structuree
+   schema- model
+   Using Model we do CRUD operations
+
+   Jo hamlog model ka name denge wahi ultimately hamlog ka collection ka name banjayega\
