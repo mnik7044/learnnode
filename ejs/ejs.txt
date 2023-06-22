@@ -1,0 +1,5 @@
+To render the ui ux from the server we use server side rendering kyuki otherwise
+hame pura html css nd js likhna padega
+ye server side rendering hamlog kaafi chijh ko us e krke kar skte hai one of them is our beloved ejs
+ EJS stands for embedded javascript templating engine 
+problem tye hai ki 
