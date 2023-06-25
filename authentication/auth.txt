@@ -1,0 +1,14 @@
+there are two patterns of authentication 
+
+One is stateful and the other is stateless
+Stateful is the one which maintains state or data or the server side 
+
+Example- parking me ticket leke car rakhke wapas ticket deke apna gaadi leta hai
+gaadi ko jaise hi ticket dikhake wo banda leke jayega waisehi wo apne diary se infos delete krdega
+
+
+Example client gives its username and password to the server nd gets a unique session id server uska track rkhta hai
+Ab usko aona id dikhana hoga
+
+Stateless is the one which has no state 
+
