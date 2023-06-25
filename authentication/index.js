@@ -10,13 +10,37 @@ app.get('/users', (req,res) =>{
     res.json(users)
 })
 
-app.post('/users', (req,res) =>{
-    const user = {name: req.body.name , password: req.body.password}
+app.post('/users', async(req,res) =>{
+    try{
+        const salt = await bcrypt.genSalt() // Using bcrypt package to generate salt
+        const hashedPassword = await bcrypt.hash(req.body.password, salt) // Creating the hashed password, and adding the salt
+        console.log(salt) //logging out salt
+        console.log(hashedPassword) // logging out hashed password
+    
+    const user = {name: req.body.name , password: hashedPassword}
     users.push(user)
     res.status(201).send()
-    hash('password') // will return to us a hashed password that looks like this sadasadrd
-})// but here if multiple person has same password same hashed string will be there 
+    }
+    catch{
+        res.status(500).send()
+    }
+})
+app.post('/users/login', async (req,res) => {
+    const user = users.find(user => user.name = req.body.name)
+    if(user == null){
+        return res.status(400).send("Cannot find user")
+}
+try{
+    if(await bcrypt.compare(req.body.password, user.password))
+    {
+        res.send('success')
+    } else{
+        res.send("not allowed")
+    }
+} catch{
+    res.status(500).send()
+}
 
-
+})
 
 app.listen(3001)
